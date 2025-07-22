@@ -8,6 +8,7 @@ let val=a.reduce((acc,curr)=>{
 console.log(val);
  
 
+// largest Element in an Array
 let max=a.reduce((acc,curr)=>{
     if(acc>curr) return acc;
     else return curr
