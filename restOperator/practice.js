@@ -1,5 +1,5 @@
-//! rest -> pack elements into arrays
-//! rest think of using on left side 
+// ! rest -> pack elements into arrays
+// ! rest think of using on left side 
 let a=[1,2,3,4]
 let [b,c,...d]=a
 console.log(b,c,d);
