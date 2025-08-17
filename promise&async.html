@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>API Fetch Assignment</title>
+  </head>
+  <body>
+    <button id="loadPostsPromise">Load Posts (Promise)</button>
+    <button id="loadPostsAsync">Load Posts (Async/Await)</button>
+    <div id="output"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+<script>
+  const output = document.getElementById("output");
+
+  function loadPost() {
+    output.innerHTML = "Loading post...";
+
+    fetch("https://jsonplaceholder.typicode.com/posts")
+      .then((res) => res.json())
+      .then((data) => {
+        output.innerHTML = "<pre>" + JSON.stringify(data, null, 2) + "</pre>";
+      })
+      .catch((err) => (output.innerHTML = "Error" + err.message));
+  }
+
+  document
+    .getElementById("loadPostsPromise")
+    .addEventListener("click", loadPost);
+
+  async function loadPostAysnc() {
+    try {
+      const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+      let data = await res.json();
+      data = JSON.stringify(data, null, 2);
+      output.innerHTML = "<pre>" + data + "</pre>";
+    } catch (err) {
+      output.innerHTML = "Error" + err.message;
+    }
+  }
+
+  document
+    .getElementById("loadPostsAsync")
+    .addEventListener("click", loadPostAysnc);
+</script>
