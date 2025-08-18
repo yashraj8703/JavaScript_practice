@@ -1,0 +1,23 @@
+{
+  "name": "javascript_practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "first.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yashraj8703/JavaScript_practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yashraj8703/JavaScript_practice/issues"
+  },
+  "homepage": "https://github.com/yashraj8703/JavaScript_practice#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {}
+}
